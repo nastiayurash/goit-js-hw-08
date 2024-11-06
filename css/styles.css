@@ -22,6 +22,7 @@ body {
   margin: 0;
   width: calc((100% - 2 * 24px) / 3);
 }
+
 .gallery {
   padding: 24px 0;
   display: flex;
@@ -29,8 +30,10 @@ body {
   justify-content: center;
   gap: 24px;
 }
+
 .gallery-image {
   width: 100%;
   max-width: 360px;
   height: 200px;
+  cursor: url("./bxs_hand-down.svg"), pointer;
 }
