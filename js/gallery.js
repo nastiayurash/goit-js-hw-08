@@ -72,3 +72,22 @@ const galleryItems = images.map(({ preview, original, description }) => {
 })
 
 galleryContainer.append(...galleryItems);
+
+galleryContainer.addEventListener("click", onGalleryItemClick);
+function onGalleryItemClick(event) {
+  event.preventDefault();
+
+  const isGalleryImage = event.target.classList.contains("gallery-image");
+  if (!isGalleryImage)
+    return;
+  
+  const LargeImageUrl = event.target.dataset.source;
+  console.log(`Large image link: ${LargeImageUrl}`);
+
+  const instance = basicLightbox.create(`<div class="modal"> 
+    <img src="${LargeImageUrl}">`)
+instance.show()
+}
+
+
+
